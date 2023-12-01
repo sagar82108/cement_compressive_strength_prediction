@@ -1,0 +1,68 @@
+[2023-12-01 11:01:12,173 ] 160 numexpr.utils - INFO- NumExpr defaulting to 4 threads.
+[2023-12-01 11:01:13,860 ] 24 root - INFO- data ingestion has started
+[2023-12-01 11:01:13,860 ] 28 root - INFO- dataset read as pandas  dataframe
+[2023-12-01 11:01:13,877 ] 34 root - INFO- train test split
+[2023-12-01 11:01:13,892 ] 40 root - INFO- ingestion of data is completed
+[2023-12-01 11:01:13,901 ] 52 root - INFO- read train and test data completed
+[2023-12-01 11:01:13,901 ] 53 root - INFO- train dataframe head: 
+   cement  blast_furnace_slag  fly_ash  water  superplasticizer  coarse_aggregate  fine_aggregate   age  concrete_compressive_strength
+0   158.6               148.9    116.0  175.1              15.0             953.3            719.7   28                          27.68
+1   424.0                22.0    132.0  178.0               8.5             822.0            750.0   28                          62.05
+2   275.1                 0.0    121.4  159.5               9.9            1053.6            777.5    3                          23.80
+3   252.0                97.0     76.0  194.0               8.0             835.0            821.0   28                          33.40
+4   168.9                42.2    124.3  158.3              10.8            1080.8            796.2    3                           7.40
+[2023-12-01 11:01:13,916 ] 54 root - INFO- test dataframe head : 
+   cement  blast_furnace_slag  fly_ash  water  superplasticizer  coarse_aggregate  fine_aggregate   age  concrete_compressive_strength
+0   266.0               114.0      0.0  228.0               0.0             932.0            670.0  365                          52.91
+1   362.6               189.0      0.0  164.9              11.6             944.7            755.8    7                          55.90
+2   389.9               189.0      0.0  145.9              22.0             944.7            755.8   28                          74.50
+3   362.6               189.0      0.0  164.9              11.6             944.7            755.8    3                          35.30
+4   145.0                 0.0    179.0  202.0               8.0             824.0            869.0   28                          10.54
+[2023-12-01 11:01:13,916 ] 55 root - INFO- obtaining preprocessing object
+[2023-12-01 11:01:13,916 ] 29 root - INFO- data transformation initiated
+[2023-12-01 11:01:13,916 ] 65 root - INFO- train dataframe head: 
+   cement  blast_furnace_slag  fly_ash  water  superplasticizer  coarse_aggregate  fine_aggregate   age
+0   158.6               148.9    116.0  175.1              15.0             953.3            719.7   28
+1   424.0                22.0    132.0  178.0               8.5             822.0            750.0   28
+2   275.1                 0.0    121.4  159.5               9.9            1053.6            777.5    3
+3   252.0                97.0     76.0  194.0               8.0             835.0            821.0   28
+4   168.9                42.2    124.3  158.3              10.8            1080.8            796.2    3
+[2023-12-01 11:01:13,916 ] 66 root - INFO- test dataframe head : 
+0    27.68
+1    62.05
+2    23.80
+3    33.40
+4     7.40
+[2023-12-01 11:01:13,916 ] 83 root - INFO- applying preprocesssing object on training and testing datasets
+[2023-12-01 11:01:13,916 ] 92 root - INFO- preprocessor pickle is created and logged
+[2023-12-01 11:01:13,916 ] 93 root - INFO- train dataframe head: 
+[[-1.16087734e+00  8.57387473e-01  9.82448897e-01 ... -6.47520108e-01
+  -2.75673148e-01  2.76800000e+01]
+ [ 1.30862304e+00 -6.02491890e-01  1.23259821e+00 ... -2.73148203e-01
+  -2.75673148e-01  6.20500000e+01]
+ [-7.68653020e-02 -8.55583663e-01  1.06687429e+00 ...  6.66282787e-02
+  -6.89313388e-01  2.38000000e+01]
+ ...
+ [-8.65914407e-01 -8.55583663e-01  1.12628475e+00 ...  3.31036159e-01
+   9.15610742e-01  3.35600000e+01]
+ [ 1.78316909e+00  5.11111911e-01 -8.31133609e-01 ...  1.16050312e-01
+  -2.75673148e-01  6.83000000e+01]
+ [ 2.85092365e-01 -8.55583663e-01  9.35545901e-01 ...  1.34583575e-01
+  -2.75673148e-01  3.84600000e+01]]
+[2023-12-01 11:01:13,916 ] 94 root - INFO- test dataframe head : 
+[[-1.61539204e-01  4.55891888e-01 -8.31133609e-01 ... -1.26158888e+00
+   5.30019728e+00  5.29100000e+01]
+ [ 7.37306828e-01  1.31870475e+00 -8.31133609e-01 ... -2.01486254e-01
+  -6.23130949e-01  5.59000000e+01]
+ [ 9.91328533e-01  1.31870475e+00 -8.31133609e-01 ... -2.01486254e-01
+  -2.75673148e-01  7.45000000e+01]
+ ...
+ [ 2.73487307e-02  1.45560439e+00 -8.31133609e-01 ...  3.90342600e-01
+  -6.23130949e-01  3.80000000e+01]
+ [ 1.30862304e+00 -6.02491890e-01  1.23259821e+00 ... -2.73148203e-01
+   1.87603920e-01  7.43600000e+01]
+ [ 5.17712974e-01 -8.55583663e-01 -8.31133609e-01 ...  1.09872558e-01
+   7.50154646e-01  3.51700000e+01]]
+[2023-12-01 11:01:13,916 ] 25 root - INFO- splitting dependent and independent variables from train and test
+[2023-12-01 11:01:14,983 ] 41 root - INFO- model report : {'DecisionTreeRegressor': 0.839329883258134}
+[2023-12-01 11:01:14,983 ] 53 root - INFO- best model found,model name:DecisionTreeRegressor,r2 score:0.839329883258134
